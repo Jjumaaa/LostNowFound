@@ -1,0 +1,92 @@
+.dashboardContainer {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.dashboardHeader {
+  text-align: center;
+  color: #343a40;
+  margin-bottom: 30px;
+  font-size: 2.2em;
+}
+
+.dashboardSection {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.dashboardSection h3 {
+  color: #007bff;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 10px;
+  font-size: 1.6em;
+}
+
+.actionButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.actionButton {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex: 1 1 200px; /* Allows buttons to grow but ensures min width */
+  text-align: center;
+}
+
+.actionButton:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.itemGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Error and Loading States */
+.errorText {
+  color: #dc3545;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboardContainer {
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  .dashboardHeader {
+    font-size: 1.8em;
+  }
+
+  .actionButton {
+    font-size: 1em;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .actionButtons {
+    flex-direction: column;
+  }
+}

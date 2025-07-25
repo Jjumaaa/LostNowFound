@@ -1,0 +1,72 @@
+.commentsList {
+  margin-top: 20px;
+}
+
+.noComments {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 15px;
+  border: 1px dashed #e9ecef;
+  border-radius: 5px;
+}
+
+.commentCard {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.commentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.commentAuthor {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.commentDate {
+  font-size: 0.85em;
+  color: #777;
+}
+
+.commentContent {
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.commentActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+.commentActions button {
+  /* Inherits styles from Buttons.module.css */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .commentCard {
+    padding: 12px;
+  }
+  .commentHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .commentDate {
+    font-size: 0.8em;
+  }
+}

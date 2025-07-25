@@ -1,0 +1,43 @@
+.appContainer {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.mainContentWrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease;
+  padding-left: 0; /* Default: no padding shift */
+}
+
+.sidebarShift {
+  /* This class will be applied when sidebar is open to shift content */
+  /* Adjust this based on your sidebar's width */
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  max-width: 1200px; /* Max width for content */
+  margin: 0 auto; /* Center content */
+  width: 100%;
+}
+
+.appLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5em;
+  color: #007bff;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .mainContentWrapper {
+    margin-left: 0 !important; /* On mobile, sidebar covers, doesn't push */
+  }
+}

@@ -1,0 +1,99 @@
+.navbar {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  border-bottom: 1px solid #eee;
+}
+
+.navbarLeft {
+  display: flex;
+  align-items: center;
+}
+
+.sidebarToggle {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #333;
+  cursor: pointer;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebarToggle:hover {
+  color: #007bff;
+}
+
+.brand {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: #0056b3;
+}
+
+.navbarRight {
+  display: flex;
+  align-items: center;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.userIcon {
+  font-size: 1.2em;
+  margin-right: 8px;
+  color: #007bff;
+}
+
+.logoutButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.logoutButton svg {
+  margin-right: 5px;
+}
+
+.logoutButton:hover {
+  background-color: #c82333;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .brand {
+    font-size: 1.2em;
+  }
+
+  .userInfo {
+    display: none; /* Hide user info on smaller screens */
+  }
+
+  .logoutButton {
+    padding: 6px 10px;
+    font-size: 0.8em;
+  }
+}

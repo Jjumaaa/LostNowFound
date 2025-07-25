@@ -1,0 +1,119 @@
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50; /* Darker background for professional look */
+  color: white;
+  padding: 20px 0;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); /* Hidden by default */
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 900; /* Above main content, below modal */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Slide in */
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 20px;
+  border-bottom: 1px solid #4a657e;
+  margin-bottom: 20px;
+}
+
+.sidebarTitle {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: none; /* Hidden on desktop, shown on mobile */
+}
+
+.sidebarMenu {
+  list-style: none;
+  padding: 0;
+}
+
+.menuItem {
+  margin-bottom: 10px;
+}
+
+.menuItem a {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: background-color 0.2s ease;
+}
+
+.menuItem a svg {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.menuItem a:hover {
+  background-color: #34495e; /* Slightly lighter dark */
+  border-left: 5px solid #007bff; /* Highlight on hover */
+}
+
+.menuItem.active a {
+  background-color: #007bff; /* Active item highlight */
+  border-left: 5px solid #fff;
+  font-weight: bold;
+}
+
+/* Desktop styles: Sidebar always open and pushing content */
+@media (min-width: 769px) {
+  .sidebar {
+    position: sticky; /* Sticky on desktop */
+    transform: translateX(0); /* Always open */
+    top: 0;
+    height: 100vh;
+    flex-shrink: 0; /* Prevent it from shrinking */
+  }
+
+  /* Shift the main content when sidebar is open */
+  .mainContentWrapper {
+    margin-left: 250px; /* Width of the sidebar */
+  }
+
+  .closeBtn {
+    display: none; /* Hide close button on desktop */
+  }
+}
+
+/* Mobile styles: Sidebar collapsing */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 250px;
+    position: fixed; /* Fixed on mobile */
+    height: 100%;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .closeBtn {
+    display: block; /* Show close button on mobile */
+  }
+
+  .sidebarHeader {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
