@@ -154,6 +154,7 @@ function Register() {
             aria-label="Select Role"
           >
             <option value="user">User</option>
+            <option value="admin">Admin</option>
           </select>
         </div>
 
