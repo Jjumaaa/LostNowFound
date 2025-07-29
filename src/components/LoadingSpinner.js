@@ -1,7 +1,4 @@
-import React from 'react';
-// You can use a simple CSS spinner or an external library like react-spinners
-// For simplicity, let's use a basic CSS spinner here.
-import './LoadingSpinner.css'; // Create this CSS file
+import './LoadingSpinner.css';
 
 const LoadingSpinner = () => {
   return (
