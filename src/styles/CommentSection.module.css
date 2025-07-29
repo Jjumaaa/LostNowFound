@@ -53,10 +53,8 @@
 }
 
 .commentActions button {
-  /* Inherits styles from Buttons.module.css */
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
   .commentCard {
     padding: 12px;

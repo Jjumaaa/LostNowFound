@@ -15,5 +15,4 @@ export const store = configureStore({
     reward: rewardReducer,
     admin: adminReducer,
   },
-  // You can add middleware here if needed
 });
